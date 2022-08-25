@@ -105,6 +105,8 @@ def assign_non_unique(args, alns, unique_alns, marker_info):
 	""" Probabalistically assign ambiguously mapped reads """
 	import numpy as np
 	import random
+	np.random.seed(2022)
+	random.seed(2022)
 	total_alns = unique_alns.copy()
 	for aln in alns:
 		if len(aln) > 1:
